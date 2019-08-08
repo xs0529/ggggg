@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>vaeyoAdmin单擎版</title>
+  <link rel="stylesheet" href="/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="/lib/vaeyo/css/vaeyo.css">
+  <script>
+  /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
+  </script>
+</head>
+<body class="layui-layout-body">
+
+	<div class="layui-layout layui-layout-admin">
+	  	<div class="layui-header">
+		    <div class="layui-logo" vaeyo-home>vaeyoAdmin单擎版</div>
+		    <div class="vaeyo-loading" vaeyo-loading><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i></div>
+		    <ul class="layui-nav layui-layout-right">
+		      <li class="layui-nav-item" lay-unselect>
+		      	<a href="javascript:;" vaeyo-refresh class="refreshThis">
+			      	<i class="layui-icon layui-icon-refresh-3"></i> 
+			    </a>
+		      </li>
+		      <li class="layui-nav-item" lay-unselect>
+		        <a href="javascript:;" vaeyo-logout>
+		          <img src="http://p.store.itangyuan.com/p/chapter/attachment/eg6s4gAUES/Egfv4gMVEtASEtIwEB-ue0UsK_m5iHyq6u-Ui_m78Cqqf_9O9V5bgCQ.jpg" class="layui-nav-img">
+		        </a>
+		      </li>
+		      <li class="layui-nav-item" lay-unselect>
+			      <div>
+					  <div id="vaeyo-color"></div>
+				  </div>
+			  </li>
+		    </ul>
+		</div>
+		<div class="layui-side vaeyo-bg-gray">
+		    <div class="vaeyo-menulist">
+				<div class="vaeyo-menulist-1">
+					<div class="vaeyo-menulist-top">
+						<a href="javascript:;" vaeyo_tab vae-id="1004" vae-title="数据表格" vae-src="/view/table.html"><i class="layui-icon layui-icon-table"></i></a>
+						<a href="javascript:;" style="background-color: #01AAED" vaeyo_tab vae-id="1006" vae-title="表单展示" vae-src="/view/form.html"><i class="layui-icon layui-icon-edit"></i></a>
+						<a href="javascript:;" style="background-color: #FFB800" vaeyo_tab vae-id="1010" vae-title="滑块组件" vae-src="/view/slider.html"><i class="layui-icon layui-icon-website"></i></a>
+						<a href="javascript:;" style="background-color: #FF5722"><i class="layui-icon layui-icon-delete"></i></a>
+					</div>
+					<div class="vaeyo-menulist-2"><i class="layui-icon layui-icon-right"></i> 页面</div>
+					<div class="vaeyo-menulist-3">
+						<ul>
+							<a href="/view/complete/login.html" target="_blank">
+								<li><i class="layui-icon layui-icon-right"></i> 会员登录</li>
+							</a>
+						</ul>
+					</div>
+					<div class="vaeyo-menulist-2"><i class="layui-icon layui-icon-right"></i> 集成组件</div>
+					<div class="vaeyo-menulist-3">
+						<ul>
+							<li vaeyo_tab vae-id="1001" vae-title="树形表格" vae-src="/view/complete/treeGrid.html"><i class="layui-icon layui-icon-right"></i> 树形表格</li>
+							<li vaeyo_tab vae-id="1002" vae-title="权限控制树" vae-src="/view/complete/authTree.html"><i class="layui-icon layui-icon-right"></i> 权限控制树</li>
+						</ul>
+					</div>
+					<div class="vaeyo-menulist-2"><i class="layui-icon layui-icon-right"></i> 内置组件</div>
+					<div class="vaeyo-menulist-3">
+						<ul>
+							<li class="vaeyo-menulist-2"><i class="layui-icon layui-icon-right"></i> 表格</li>
+							<div class="vaeyo-menulist-3 vae-menulist-4">
+								<ul>
+									<li vaeyo_tab vae-id="1004" vae-title="数据表格" vae-src="/view/table.html"><i class="layui-icon layui-icon-right"></i> 数据表格</li>
+									<li vaeyo_tab vae-id="1005" vae-title="静态表格" vae-src="/view/table1.html"><i class="layui-icon layui-icon-right"></i> 静态表格</li>
+								</ul>
+							</div>
+							<li vaeyo_tab vae-id="1006" vae-title="表单展示" vae-src="/view/form.html"><i class="layui-icon layui-icon-right"></i> 表单</li>
+							<li vaeyo_tab vae-id="1007" vae-title="按钮展示" vae-src="/view/button.html"><i class="layui-icon layui-icon-right"></i> 按钮</li>
+							<li vaeyo_tab vae-id="1008" vae-title="卡片面板" vae-src="/view/panel.html"><i class="layui-icon layui-icon-right"></i> 面板</li>
+							<li vaeyo_tab vae-id="1009" vae-title="辅助元素" vae-src="/view/auxiliar.html"><i class="layui-icon layui-icon-right"></i> 辅助元素</li>
+							<li vaeyo_tab vae-id="1010" vae-title="滑块组件" vae-src="/view/slider.html"><i class="layui-icon layui-icon-right"></i> 滑块</li>
+							<li vaeyo_tab vae-id="1011" vae-title="评分组件" vae-src="/view/rate.html"><i class="layui-icon layui-icon-right"></i> 评分</li>
+							<li vaeyo_tab vae-id="1012" vae-title="轮播组图" vae-src="/view/carousel.html"><i class="layui-icon layui-icon-right"></i> 轮播</li>
+							<li vaeyo_tab vae-id="1013" vae-title="代码修饰" vae-src="/view/code.html"><i class="layui-icon layui-icon-right"></i> 代码修饰</li>
+							<li vaeyo_tab vae-id="1014" vae-title="时间拾取" vae-src="/view/date.html"><i class="layui-icon layui-icon-right"></i> 时间拾取</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	  
+	    <div class="layui-body">
+		    <div class="layui-tab layui-tab-brief vaeyo-tab" lay-filter="vaeyo-tab" lay-allowClose="true" style="height: 100%;">
+			  <ul class="layui-tab-title">
+			    <li class="layui-this" lay-id="0" style="display: none">首页</li>
+			  </ul>
+			  <div class="layui-tab-content" style="height: 100%;" vaeyo-tab-content>
+			    <div class="layui-tab-item layui-show">
+			    	<iframe id="0" name="myiframe" src="/view/main.html" frameborder="0" align="left" width="100%" height="100%" scrolling="yes"></iframe>
+			    </div>
+			  </div>
+			</div>   
+	    </div>
+	  	
+	  	<div class="layui-footer">
+		    © vaeyoAdmin - 底部固定区域
+		</div>
+
+	</div>
+ 
+	<script src="lib/layui/layui.js"></script>
+	<script>
+		layui.config({
+		  base: '/'
+		}).use('index');
+	</script> 
+	  
+</body>
+</html>

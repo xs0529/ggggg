@@ -24,7 +24,7 @@ public class GenConfigServiceImpl implements GenConfigService {
 
     @Override
     public GenConfig update(GenConfig genConfig) {
-        genConfig.setId(1L);
+        genConfig.setId(1);
         genConfigMapper.insert(genConfig);
         return genConfig;
     }
