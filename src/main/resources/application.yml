@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    hikari:
+      connection-timeout: 400000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximumPoolSize: 15
+      minimum-idle: 5
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&amp;autoReconnect=true&amp;useSSL=true
+    username: root
+    password: root

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.iotcode.generate.mapper.GenConfigMapper">
+
+    <select id="columnInfos" resultType="xyz.iotcode.generate.entity.vo.ColumnInfo">
+        SELECT
+            column_name,
+            is_nullable,
+            data_type,
+            column_comment,
+            column_key,
+            extra
+        FROM
+            information_schema.COLUMNS
+        WHERE
+            table_name = #{tableName}
+            AND table_schema = ( SELECT DATABASE ( ) )
+        ORDER BY
+            ordinal_position
+    </select>
+    <select id="tableInfos" resultType="xyz.iotcode.generate.entity.vo.TableInfo">
+        SELECT
+            table_name tableName,
+            create_time createTime
+        FROM
+            information_schema.TABLES
+        WHERE
+            table_schema = ( SELECT DATABASE ( ) )
+            AND table_name LIKE concat('%',#{tableName} ,'%')
+        ORDER BY
+            table_name
+    </select>
+
+</mapper>
